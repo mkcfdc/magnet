@@ -1,0 +1,18 @@
+# Stage 1: Build the React app
+FROM node:latest
+WORKDIR /react-app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+#COPY postcss.config.js ./
+COPY tailwind.config.js ./
+
+# Install app dependencies
+RUN npm install
+
+# Copy the source code
+COPY public/ public/
+COPY src/ src/
+
+# Run the application using serve
+CMD ["npm", "start"]

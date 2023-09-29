@@ -1,0 +1,113 @@
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body {
+  background-color: #f2f2f2;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box .form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.search-box .form-control {
+  padding: 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: none;
+  background-color: #fff;
+  font-size: 18px;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.search-box .btn-search {
+  margin-left: 10px;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* Remove position: absolute; */
+  /* Remove top: calc(100% + 20px); */
+  min-height: 200px; /* Adjust the minimum height based on your needs */
+}
+
+.results-container .loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px; /* Same as the minimum height of results container */
+}
+.result:hover {
+  cursor: pointer;
+}
+
+/* Hide the default checkboxes */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the custom checkboxes */
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.custom-checkbox .checkmark {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #999;
+  background-color: #fff;
+  margin-right: 8px;
+}
+
+/* Style the custom checkboxes when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Add a checkmark icon to the custom checkboxes when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::before {
+  content: "\2713"; /* Checkmark icon */
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 5px;
+  color: #fff;
+}
+.footer {
+  background-color: #f2f2f2;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+}
